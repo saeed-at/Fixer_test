@@ -4,13 +4,13 @@ import requests
 url = 'https://api.apilayer.com/fixer/latest?base=EUR'
 
 
-def get_rates(API_KEY):
+def get_rates(api_key):
     """
     send a get requests to the fixer.io api and get live rates
     :return: request.Response instance
     """
-    headers = {
-        'api_key': API_KEY,
+    headers={
+        'apikey' : api_key,
     }
     # Send HTTP Request
     response = requests.request("GET", url, headers=headers)
