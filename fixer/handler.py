@@ -17,5 +17,7 @@ def get_rates(API_KEY):
     # Check the status
     status_code = str(response.status_code)
     if status_code.startswith('2'):
+        print(response.text)
         return json.loads(response.text)
+        
     return None
